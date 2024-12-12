@@ -1,0 +1,28 @@
+/* Main */
+main {
+    padding: 1vw 4vw;
+    background-color: var(--clr-bg-light);
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#left-sidebar {
+    flex-basis: 25%;
+    align-self: flex-start;
+    height: 100%;
+    position: sticky;
+    top: 6vw;
+}
+
+#right-sidebar {
+    flex-basis: 25%;
+    align-self: flex-start;
+    height: 100%;
+}
+
+#main-bar {
+    flex-basis: 47%;
+}

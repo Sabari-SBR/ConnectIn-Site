@@ -1,0 +1,165 @@
+/* Header */
+#header {
+    padding: 1vw 4vw;
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+#header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header nav .nav-left,
+#header nav .nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 80px;
+}   
+
+#header nav .nav-left ul {
+    display: flex;
+    gap: 40px;
+}
+
+#header nav .nav-left .site-logo {
+    width: 150px;
+    height: auto;
+}
+
+#header nav .nav-right .search {
+    background-color: var(--clr-light);
+    width: 320px;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding-inline: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+#header nav .nav-right .search input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: var(--ff-mont);
+    font-size: var(--text-sm);
+    cursor: pointer;
+    &::placeholder {color: var(--clr-slate600);}
+}
+
+#header nav .nav-right .profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#header nav .nav-right .profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#header nav .nav-right .online {
+    position: relative;
+
+    &::after {
+        content: '';
+        width:  8px;
+        height: 8px;
+        background-color: var(--clr-green);
+        border: 1.5px solid #fff;
+        border-radius: 50%;
+
+        position: absolute;
+        bottom: 2px;
+        right: 2px;
+    }
+}
+
+/* Settings Menu */
+#header .settings-menu {
+    background-color: var(--clr-light);
+    width: 320px;
+    max-height: 0;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    transition: max-height 0.1s;
+    position: absolute;
+    top: 110%;
+    right: 4%;
+}
+
+.settings-menu-active { max-height: 450px !important; }
+
+#header .settings-menu .settings-menu-inner { padding: 30px; }
+
+#header .settings-profile .profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--clr-slate400);
+    margin-bottom: 15px;
+}
+
+#header .settings-profile .profile img {
+    width: 45px;
+    height: auto;
+    border-radius: 50%;
+}
+
+#header .settings-profile .profile h5 {
+    color: var(--clr-slate700);
+}
+
+#header .settings-profile .profile a {
+    color: var(--clr-blue);
+    font-size: var(--text-xs);
+    display: block;
+}
+
+#header .settings-menu .menu-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    &:last-child { margin-bottom: 0; }
+}
+
+#header .settings-menu .menu-links .link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+#header .settings-menu .menu-links .link .icon {
+    width: 45px;
+    height: auto;
+    background-color: var(--clr-slate200);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#header .settings-menu .menu-links .link a {
+    font-size: var(--text-xs);
+    color: var(--clr-slate700);
+    transition: color 0.3s ease;
+    &:hover { color: var(--clr-violet); }
+}
